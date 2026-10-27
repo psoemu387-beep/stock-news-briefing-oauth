@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <title>카카오 최초 인증</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <h1>카카오 최초 인증</h1>
+    <p>메시지는 보내지 않습니다. Client Secret이나 GitHub 토큰은 이 페이지에 입력하지 마세요.</p>
+    <p id="status" role="status"></p>
+    <section id="start">
+      <label for="key">내 앱의 REST API 키</label>
+      <input id="key" type="password" autocomplete="off" spellcheck="false">
+      <button id="login" type="button">카카오 로그인·동의</button>
+      <p>먼저 GitHub 비공개 저장소의 Repository Secret 등록 화면과 OAuth Actions 실행 화면을 다른 탭에 준비하세요.</p>
+      <p>아래 현재 주소를 카카오 Redirect URI와 GitHub의 KAKAO_REDIRECT_URI 변수에 동일하게 등록해야 합니다.</p>
+      <code id="redirect"></code>
+    </section>
+    <section id="result" hidden>
+      <p>인증 코드가 메모리에 준비됐습니다. 아래 버튼으로 복사한 뒤 GitHub의 비공개 저장소에 KAKAO_AUTH_CODE Secret으로 저장하고, 즉시 Initialize Kakao OAuth를 실행하세요.</p>
+      <button id="copy" type="button">일회용 인증 코드 복사</button>
+      <p>코드가 만료되거나 이미 사용됐다면 새로 로그인해야 합니다. 이 페이지에는 액세스·리프레시 토큰이 전달되지 않습니다.</p>
+    </section>
+  </main>
+</body>
+</html>

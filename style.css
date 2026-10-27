@@ -1,0 +1,6 @@
+body { font-family: system-ui, sans-serif; max-width: 44rem; margin: 3rem auto; padding: 0 1rem; line-height: 1.7; }
+input, button { display: block; padding: .7rem; margin: .6rem 0; max-width: 100%; }
+input { width: 24rem; }
+button { cursor: pointer; }
+code { overflow-wrap: anywhere; }
+[hidden] { display: none; }
